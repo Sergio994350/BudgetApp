@@ -1,6 +1,7 @@
 package com.sergio994350.budgetapp
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -32,6 +33,11 @@ class MainActivity : AppCompatActivity() {
             layoutManager = linearLayoutManager
         }
         upgradeDashboard()
+
+        addBtn.setOnClickListener {
+            val intent = Intent(this, AddTransactionActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     @SuppressLint("SetTextI18n")
